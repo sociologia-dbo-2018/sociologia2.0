@@ -6,13 +6,6 @@ body {
 
 .master-container {
     background-color: rgb(248, 247, 247);
-    margin: 2% 1.5%;
-    box-shadow: 1px 4px 4px 5px rgba(0,0,0,0.2);
-}
-
-.navbarSup {
-    background-color: rgb(224, 224, 224);
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 .itemClick {
