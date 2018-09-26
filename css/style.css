@@ -1,0 +1,8 @@
+.collaborators{
+    height: 450px;
+    overflow: hidden;
+    overflow: scroll;
+}
+h1 {
+    align-items: center;
+}
