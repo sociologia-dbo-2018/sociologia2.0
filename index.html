@@ -10,20 +10,22 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/homePage.css">
         <link rel="stylesheet" href="css/colors.css">
         <link rel="stylesheet" href="css/effects.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/ilustrationImg.css">
         <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
         <title>Sociologia</title>
     </head>
     <body>
         <div class="flex-column d-flex align-items-center master-container">
-            <header class="d-flex flex-row-reverse flex-direction-center justify-content-center container-fluid">
+            <header class="d-flex flex-row-reverse mt-2 flex-direction-center justify-content-center container-fluid">
                 <!-- NAVBAR -->
                 <nav class="navbar navbarSup container-fluid">
                     <div class="container-fluid">
                         <!-- BRAND -->
-                        <div class="navbar-header mb-5">
+                        <div class="navbar-header">
                             <i class="navbar-toggle collapsed fas fa-bars" data-toggle="collapse" data-target="#alignment"
                             aria-expanded="false"></i>
                         </div>
@@ -32,26 +34,55 @@
                         </div>
                         <div></div>
                         <!-- COLLAPSIBLE NAVBAR -->
-                        <div class="collapse mt-5 navbar-collapse" id="alignment">
+                        <div class="collapse navbar-collapse" id="alignment">
+                            <hr class="w-75">
                             <!-- Links -->
                             <ul class="nav navbar-nav d-flex flex-row justify-content-center">
                                 <li class="mr-4"><a href="./index.html">Página Inicial</a></li>
                                 <li class="mr-4"><a href="./pages/about.html">Sobre nós</a></li>
                                 <li class="mr-4"><a href="./pages/feed.html">Feed de Noticias</a></li>
                                 <li class="mr-4"><a href="./pages/report.html">Reportar caso</a></li>
-                                <li class="mr-4"><a href="./pages/statistics.html">Estatistícas</a></li>
+                                <li class="mr-4 mb-2"><a href="./pages/statistics.html">Estatistícas</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
             </header>
-            <div class="apresentation d-flex flex-column mt-5">
-                <div class="description d-flex justify-content-center flex-column align-items-center">
-                    <a href="./pages/about.html">Project Name</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                </div>
-            </div>
 
+            <!--Possivel ideia de um carrousel -->
+
+            <div id="carousel" class="carousel slide w-100" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1" ></li>
+                    <li data-target="#carousel" data-slide-to="2" ></li>
+                </ol>
+                <div class="carousel-inner d-flex justify-content-center align-items-center">
+                    <div class="txt-fixed">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <a href="./pages/about.html">Project Name</a>
+                            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet,  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 imgCarousel " src="./img/firstImg.png" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 imgCarousel" src="./img/secondImg.png" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 imgCarousel" src="./img/thirdImg.png" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
             <div class="feed container-fluid d-flex flex-column">
                 <h2 class="ml-4">Feed</h2>
                 <div class="interation d-flex flex-row">
@@ -174,27 +205,29 @@
                 </div>
             </div>
             <div class="sugestion w-50">
-                <h1>Sugestões</h1>
+                <h1 class="text-dark">Sugestões</h1>
                 <form class="w-75">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Name:</label>
-                        <textarea class="form-control" id="exampleFormControlTextareaName" rows="1"></textarea>
+                        <label for="name">Nome:</label>
+                        <input type="text" class="form-control" id="name" required placeholder="Digite seu nome">
                     </div>
                     <div class="form-group">
-                    <label for="exampleFormControlInput1">Email address:</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Title:</label>
-                        <textarea class="form-control" id="exampleFormControlTextareaTitle" rows="1"></textarea>
+                        <label for="titleForm">Título:</label>
+                        <input class="form-control" id="titleForm" type="text" placeholder="Titulo da sugestão">
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" id="exampleFormControlTextareaSugestion" rows="5"></textarea>
+                        <textarea class="form-control" id="sugestion" placeholder="Descrição sugestiva" rows="5"></textarea>
                     </div>
+                    <input type="submit" value="Enviar" class="btn btn-outline-success mb-5">
                 </form>
             </div>
         </footer>
-        <div class="navbar bg-dark d-flex justify-content-center">
-            <h5 class="text-white d-flex justify-content-center">Copyright</h5>
+        <hr>
+        <div class="bg-dark d-flex justify-content-center align-self-end" style="height:30px;">
+            <p class="text-white">Copyright &copy;</p>
         </div>
 </html>
